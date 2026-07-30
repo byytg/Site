@@ -1,0 +1,481 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Press Start 2P',cursive;
+    background:#09050f;
+    overflow:hidden;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-image:
+    radial-gradient(circle at top,#ff149322 0%,transparent 35%),
+    linear-gradient(#120712,#09050f);
+}
+
+
+/* ===========================
+      STARS
+=========================== */
+
+#stars{
+
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-3;
+
+}
+
+#stars::before{
+
+content:"";
+
+position:absolute;
+
+width:2px;
+height:2px;
+
+background:white;
+
+box-shadow:
+
+50px 60px white,
+100px 180px #ff69b4,
+180px 250px white,
+280px 100px #ff69b4,
+350px 160px white,
+450px 90px white,
+520px 240px hotpink,
+650px 120px white,
+720px 310px white,
+860px 180px hotpink,
+980px 80px white,
+1100px 260px hotpink,
+1200px 150px white;
+
+animation:twinkle 3s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+from{
+
+opacity:.2;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+/* ===========================
+     HEARTS
+=========================== */
+
+#hearts{
+
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+
+}
+
+
+/* ===========================
+      CARD
+=========================== */
+
+.card{
+
+width:760px;
+
+max-width:92%;
+
+background:#100813;
+
+border:5px solid hotpink;
+
+border-radius:18px;
+
+padding:60px;
+
+text-align:center;
+
+box-shadow:
+
+0 0 25px hotpink,
+
+0 0 70px #ff149355;
+
+position:relative;
+
+animation:float 4s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+
+/* ===========================
+ HEART
+=========================== */
+
+.topHeart{
+
+font-size:65px;
+
+color:#ff5fa2;
+
+margin-bottom:30px;
+
+text-shadow:
+
+0 0 15px hotpink,
+
+0 0 35px hotpink;
+
+}
+
+
+/* ===========================
+ TITLE
+=========================== */
+
+h1{
+
+color:white;
+
+font-size:24px;
+
+line-height:2;
+
+}
+
+h1 span{
+
+color:#ff4fa6;
+
+}
+
+
+/* ===========================
+ LINE
+=========================== */
+
+.line{
+
+margin:35px auto;
+
+width:260px;
+
+height:4px;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+hotpink,
+
+transparent
+
+);
+
+}
+
+
+/* ===========================
+ BUTTONS
+=========================== */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+margin-top:50px;
+
+position:relative;
+
+}
+
+
+/* ===========================
+ BUTTON
+=========================== */
+
+button{
+
+font-family:'Press Start 2P';
+
+padding:18px 34px;
+
+font-size:13px;
+
+cursor:pointer;
+
+transition:.25s;
+
+border:none;
+
+border-radius:10px;
+
+}
+
+
+/* ===========================
+ YES
+=========================== */
+
+#yes{
+
+background:#ff4fa6;
+
+color:white;
+
+box-shadow:
+
+0 0 20px hotpink;
+
+}
+
+#yes:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 35px hotpink;
+
+}
+
+
+/* ===========================
+ NO
+=========================== */
+
+#no{
+
+background:#2a1c2e;
+
+color:white;
+
+box-shadow:
+
+0 0 20px #000;
+
+position:relative;
+
+}
+
+
+/* ===========================
+ RESULT
+=========================== */
+
+#result{
+
+display:none;
+
+animation:show .8s ease;
+
+}
+
+#result h2{
+
+font-size:42px;
+
+color:#ff4fa6;
+
+line-height:1.8;
+
+text-shadow:
+
+0 0 20px hotpink,
+
+0 0 40px hotpink;
+
+}
+
+#result p{
+
+margin-top:30px;
+
+font-size:18px;
+
+color:white;
+
+}
+
+
+/* ===========================
+ CHARACTER
+=========================== */
+
+.character{
+
+position:absolute;
+
+left:70px;
+
+bottom:35px;
+
+}
+
+.character img{
+
+height:180px;
+
+image-rendering:pixelated;
+
+}
+
+
+/* ===========================
+ CAT
+=========================== */
+
+.cat{
+
+position:absolute;
+
+right:70px;
+
+bottom:35px;
+
+}
+
+.cat img{
+
+height:110px;
+
+image-rendering:pixelated;
+
+}
+
+
+/* ===========================
+ SHOW
+=========================== */
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:scale(.5);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+/* ===========================
+ MOBILE
+=========================== */
+
+@media(max-width:700px){
+
+.card{
+
+padding:30px;
+
+}
+
+h1{
+
+font-size:15px;
+
+}
+
+button{
+
+font-size:10px;
+
+padding:14px 18px;
+
+}
+
+#result h2{
+
+font-size:24px;
+
+}
+
+.character img{
+
+height:120px;
+
+}
+
+.cat img{
+
+height:70px;
+
+}
+
+}.background{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+    overflow:hidden;
+}
+
+.background img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    image-rendering:pixelated;
+}
