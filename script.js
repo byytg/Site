@@ -55,6 +55,10 @@ yesBtn.addEventListener("click", () => {
         navigator.vibrate(200);
     }
 
+function vibrate(pattern = 100) {
+    if ("vibrate" in navigator) {
+        navigator.vibrate(pattern);
+    }
 
 // =========================
 // قلوب متطايرة
