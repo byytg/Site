@@ -46,19 +46,6 @@ yesBtn.onclick = () => {
     startFireworks();
 
 }
-const yesBtn = document.getElementById("yes");
-
-yesBtn.addEventListener("click", () => {
-
-    // اهتزاز لمدة 200 مللي ثانية
-    if (navigator.vibrate) {
-        navigator.vibrate(200);
-    }
-
-function vibrate(pattern = 100) {
-    if ("vibrate" in navigator) {
-        navigator.vibrate(pattern);
-    }
 
 // =========================
 // قلوب متطايرة
